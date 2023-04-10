@@ -8,12 +8,15 @@
   padding: 20px;
 }
 .btn {
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+
   justify-content: center;
   width: 200px;
   height: 50px;
+  cursor: pointer;
 }
 .link {
   text-transform: uppercase;
@@ -22,9 +25,48 @@
   font-weight: 700;
 }
 .btn-one {
-  background-color: rgb(34, 110, 84);
+  position: relative;
+  background-color: rgb(22, 200, 138);
   border-radius: 25px;
-}
-.btn-link__one {
   color: whitesmoke;
+
+  margin-bottom: 24px;
+}
+
+.wrap_btn {
+  width: 100%;
+  background-color: #f12c2c;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.btn-two {
+  position: relative;
+  background-color: #ef5f5f;
+  color: white;
+  transition: letter-spacing 0.5s;
+  transform-origin: center;
+}
+.btn-two:hover {
+  letter-spacing: 2px;
+  background-color: transparent;
+}
+.btn-two::before,
+.btn-two::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.5s;
+  transform-origin: center;
+}
+.btn-two::before {
+  top: 0;
+}
+.btn-two::after {
+  bottom: 0;
+}
+.btn-two:hover::before,
+.btn-two:hover::after {
+  width: 100%;
 }
